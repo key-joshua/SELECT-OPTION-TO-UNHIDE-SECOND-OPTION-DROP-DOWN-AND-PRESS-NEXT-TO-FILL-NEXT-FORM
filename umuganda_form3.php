@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert</title>
+	<link rel="stylesheet" type="text/css" href="css/Style.css">
+</head>
+<body style="background-image: url(image/umuganda_them.PNG);">
+
+<div class="header">
+	
+	<h2>Register</h2>
+
+</div>
+<span id="error">
+<?php
+if (!empty($_SESSION['error_page3'])) {
+ echo $_SESSION['error_page3'];
+ unset($_SESSION['error_page3']);
+}
+?>
+</span>
+
+<form method="post" action="umuganda_form4.php" style="background-image: url(image/form.PNG);">
+<?php
+session_start(); // Session starts here.
+if (isset($_POST['GENDER'])){
+ if (empty($_POST['ID_NUMBER'])
+ || empty($_POST['FIRST_NAME'])
+ || empty($_POST['LAST_NAME'])
+ || empty($_POST['TELEPHONE'])){ 
+ // Setting error message
+ $_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Some field(s) are missing, Please fill again</div>';
+ header("location: umuganda_form2.php"); // Redirecting to first page 
+ }
+
+ else {
+
+//  if (!preg_match("/^[0-9]{10}$/", $_POST['ID_NUMBER'])){ 
+//  $_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Please !! ID_NUMBER must be Only 16 digit.</div>';
+//  header("location: umuganda_form2.php");
+// }
+
+if (!preg_match("/^[0-9]{10}$/", $_POST['TELEPHONE'])) {
+	$_SESSION['error_page2'] = '<div style="color:#ffffff;text-align: center;font-size:28px"> Please !! Telephone number must be Only 10 digit.</div>';
+ header("location: umuganda_form2.php");
+}
+ // Fetching all values posted from second page and storing it in variable.
+ foreach ($_POST as $key => $value) {
+ $_SESSION['post'][$key] = $value;
+ }}}
+ 
+ else {
+ if (empty($_SESSION['error_page3'])) {
+ header("location: umuganda_form2.php");// Redirecting to first page.
+ }
+}
+?>
+<div class="input-group">
+
+
+<label>RESULT</label>
+<input type="text" name="RESULT" required="">	
+
+
+
+
+
+
+<div class="input-group">
+<button onclick="return confirm('Are you sure!! You want to submit Data ?')" type="submit" name="next" class="btn">Submit</button>	
+<button onclick="return confirm('Are you sure!! You want to Clear Data ?')" type="reset" name="reset" class="clear" id="clear">Clear</button>	
+
+
+</div>
+
+
+<br>
+
+<p style="color: #ffffff;float: left;">
+	
+	Wanna Check_Data ? &nbsp&nbsp<a onclick="return confirm('Are you sure!! you want to check users')" href="retrieve.php" style="color: #271c02; font-size: 20px; border: 10px; "  >Check Now !!</a>
+
+</p>
+
+<br>
+
+</form>
+
+</body>
+</html>
