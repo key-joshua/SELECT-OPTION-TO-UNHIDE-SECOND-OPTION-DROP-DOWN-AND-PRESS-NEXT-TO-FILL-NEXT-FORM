@@ -1,0 +1,16 @@
+CREATE TABLE `umuganda_project` (
+ `PROVINCE` varchar(255) NOT NULL,
+ `DISTRICT` varchar(255) NOT NULL,
+ `SECTOR` varchar(255) NOT NULL,
+ `CELL` varchar(255) NOT NULL,
+ `VILLAGE` varchar(255) NOT NULL,
+ `RECORD_DATE` date NOT NULL,
+ `GENDER` varchar(255) NOT NULL,
+ `ID_NUMBER` varchar(16) NOT NULL,
+ `FIRST_NAME` varchar(255) NOT NULL,
+ `LAST_NAME` varchar(255) NOT NULL,
+ `TELEPHONE` varchar(255) NOT NULL,
+ `RESULT` varchar(255) NOT NULL,
+ `AVATAR` varchar(255) NOT NULL,
+ PRIMARY KEY (`ID_NUMBER`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
