@@ -41,6 +41,8 @@ CREATE TABLE `umuganda_project` (
 
 14. OPEN THIS URL IN WEB BROWSER TO RUN PROJECT " http://localhost/umuganda_project/ "
 
+![|way of access](SELECTOPTIONTOUNHIDESECONDO.gif)
+
 
 Thank you so, much guys in next video i will sharing you how to retrieve those data based on user id
 and if there are any question let me know and help you by emailing me k.joshua800@gmail.com 
