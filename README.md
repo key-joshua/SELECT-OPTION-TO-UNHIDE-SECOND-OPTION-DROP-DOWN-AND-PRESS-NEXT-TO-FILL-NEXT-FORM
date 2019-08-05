@@ -7,6 +7,7 @@ where in this video at the first form you will insert data by selecting the opti
 after selection you will be prompted to select another option on next input and it all about drop-down 
 also you will input data according to user needs then after filling forms you will be able to insert data in database 
 
+0. SAVE THIS FILE AS " connection.php " INSIDE " umuganda_project "
 1. CREATE FOLDER INSIDE " C:\xampp\htdocs " NAME IT " umuganda_project "
 2. SAVE THIS FILE AS " umuganda_form1.php " INSIDE " umuganda_project "
 3. SAVE NEXT FILE AS " umuganda_form2.php " INSIDE " umuganda_project "
